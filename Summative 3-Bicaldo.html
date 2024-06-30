@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartHome Hub</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Additional CSS -->
+    <style>
+        body {
+            padding-top: 56px;
+        }
+        .hero-section {
+            background: url(https://www.exascaleproject.org/wp-content/uploads/2019/11/hardware-hero-aspect-ratio-1920x600-6.jpg) no-repeat center center;
+            background-size: cover;
+            height: 600px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .features {
+            margin-top: 50px;
+        }
+        .feature-icon {
+            font-size: 50px;
+        }
+        .product-image {
+            max-width: 100%;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .pricing {
+            margin-top: 50px;
+        }
+        .pricing-table {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 20px;
+        }
+        .pricing-table h3 {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">SmartHome Hub</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <h1>Welcome to SmartHome Hub</h1>
+            <p>We make your home smart.</p>
+        </div>
+    </section>
+
+    <!-- Product Information -->
+    <section id="features" class="container features">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>SmartHome Hub Features</h2>
+                <ul>
+                    <li><strong>Centralized Control:</strong> Manage all your smart devices from a single app or interface, making it easier to control your home environment.</li>
+                    <li><strong>Voice Commands Integration:</strong> Compatible with Alexa, Google Assistant, and Siri, allowing you to use voice commands for effortless control.</li>
+                    <li><strong>Automated Scheduling:</strong> Schedule your devices to operate at specific times, enhancing convenience and energy efficiency.</li>
+                    <li><strong>Seamless Connectivity:</strong> Supports Wi-Fi, Bluetooth, and more, ensuring all your devices stay connected without interruption.</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ64FRVv4-eI9fTyGFFty1sfg__PhZI6kVASg&s" alt="SmartHome Hub" class="product-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="container pricing">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="pricing-table text-center">
+                    <h3>Pricing Plans</h3>
+                    <ul class="list-unstyled">
+                        <li>Basic Plan: php5872.05</li>
+                        <li>Standard Plan: php8808.08</li>
+                        <li>Premium Plan: php11744.10</li>
+                    </ul>
+                    <p>Choose the plan that best fits your needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="container mt-5">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer id="about" class="footer text-center">
+        <div class="container">
+            <span>&copy; 2024 SmartHome Hub. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- Smooth Scroll JavaScript -->
+    <script>
+        $(document).ready(function() {
+            // Smooth scrolling for navigation links
+            $('a.nav-link').on('click', function(event) {
+                if (this.hash !== '') {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
